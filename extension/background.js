@@ -10,6 +10,9 @@ chrome.runtime.onInstalled.addListener(function() {
         new chrome.declarativeContent.PageStateMatcher({
           pageUrl: {hostContains: 'youtube.com'},
         }),
+        new chrome.declarativeContent.PageStateMatcher({
+          pageUrl: {hostContains: 'netflix.com'},
+        }),
       ],
       actions: [new chrome.declarativeContent.ShowPageAction()]
     }]);
