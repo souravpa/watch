@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      button {
-        height: 30px;
-        width: 30px;
-        outline: none;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
-    <button id="changeColor"></button>
+    <div id="create">
+      <p>Watch</p>
+      <button id="start">Create Watch Session</button>
+    </div>
+    <div class='hidden' id="invite">
+      <p>Invite Link</p>
+      <input type='text' readonly id="link"></input>
+      <button id="copy">Copy Link</button>
+    </div>
     <script src="popup.js"></script>
   </body>
 </html>

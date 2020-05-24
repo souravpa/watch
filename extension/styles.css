@@ -1,0 +1,14 @@
+body {
+  width: 250px;
+}
+
+body * {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: stretch;
+}
+
+.hidden {
+  display: none;
+}
