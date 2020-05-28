@@ -7,8 +7,23 @@ body * {
   flex-direction: column;
   flex-grow: 1;
   align-items: stretch;
+  margin: 0.2em;
 }
 
 .hidden {
   display: none;
+}
+
+input {
+  background-color: aliceblue;
+}
+
+button {
+  background-color: lightgray;
+}
+
+.rounded {
+  border-radius: 4px;
+  border: 1px;
+  padding: 0.25em;
 }
