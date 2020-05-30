@@ -76,12 +76,24 @@ if (window.watchcontrolsInjected != true || !sessionid) {
     pauseButton.click();
   }
 
-  playButton[0].addEventListener("click", () => socket.send("play"));
+  playButton[0].addEventListener("click", (event) => {
+    if (event.isTrusted) {
+      socket.send("play");
+    }
+  });
   // some sites like netflix have different elements for play and pause
   if (playButton[0] !== pauseButton[0]) {
-    pauseButton[0].addEventListener("click", () => socket.send("pause"));
+    pauseButton[0].addEventListener("click", (event) => {
+      if (event.isTrusted) {
+        socket.send("pause");
+      }
+    });
   }
-  slider[0].addEventListener("mousedown", () => socket.send("skip " + site.progress()));
+  slider[0].addEventListener("mousedown", () => (event) => {
+    if (event.isTrusted) {
+      socket.send("skip " + site.progress());
+    }
+  });
 
   function skip(elem, progress) {
     let rect = elem.getBoundingClientRect(),
