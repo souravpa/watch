@@ -1,4 +1,5 @@
 'use strict';
+//FIXME allows creator of session to create multiple for same video
 
 chrome.tabs.query({currentWindow: true, active: true}, function(tabs){
   let url = new URL(tabs[0].url);
@@ -9,26 +10,35 @@ chrome.tabs.query({currentWindow: true, active: true}, function(tabs){
     document.getElementById('create').classList.add('hidden');
     document.getElementById('session').classList.remove('hidden');
     chrome.tabs.executeScript({file: 'jquery.js'}, function() {
-      chrome.tabs.executeScript({code: 'var sessionid = ' + sessionid + ';'}, function() {
+      chrome.tabs.executeScript({code: 'var sessionid = "' + sessionid + '";'}, function() {
         chrome.tabs.executeScript({file: 'controls.js'})
       });
     });
   } else {
     let start = document.getElementById('start');
     start.onclick = function() {
-      document.getElementById('create').classList.add('hidden');
-      
-      link.value = 'sharable link goes here';
-      document.getElementById('invite').classList.remove('hidden');
-      let copy = document.getElementById('copy');
-      copy.onclick = function() {
-        var copyText = document.getElementById("link");
-        copyText.select();
-        copyText.setSelectionRange(0, 99999);
-        document.execCommand("copy");
-      }
-      chrome.tabs.executeScript({file: 'jquery.js'}, function() {
-        chrome.tabs.executeScript({file: 'controls.js'})
+      // $.get("http://54.237.10.199/rand", function (data) {
+      $.get("http://bb0cf5981d16.ngrok.io/rand", function (data) {
+        sessionid = data;
+        document.getElementById('create').classList.add('hidden');
+        
+        link.value = url + '&watchsessionid=' + data;
+        document.getElementById('invite').classList.remove('hidden');
+        let copy = document.getElementById('copy');
+        copy.onclick = function() {
+          var copyText = document.getElementById("link");
+          copyText.select();
+          copyText.setSelectionRange(0, 99999);
+          document.execCommand("copy");
+        }
+        chrome.tabs.executeScript({file: 'jquery.js'}, function() {
+          chrome.tabs.executeScript({code: 'var sessionid = "' + data + '";'}, function() {
+            chrome.tabs.executeScript({file: 'controls.js'})
+          });
+        });
+      }).fail(function() {
+        document.getElementById('create').classList.add('hidden');
+        document.getElementById('error').classList.remove('hidden');
       });
     };
   }
