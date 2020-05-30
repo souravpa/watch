@@ -7,9 +7,9 @@ if (window.watchcontrolsInjected != true || !sessionid) {
       playButton: '.ytp-play-button',
       pauseButton: '.ytp-play-button',
       playing: function () {
-        return $('.ytp-play-button').attr('title').includes("Pause");
+        return $('.playing-mode#movie_player').length > 0;
       },
-      slider: '.ytp-progress-list',
+      slider: '.ytp-progress-bar',
       progress: function () {
         let pb = $('.ytp-progress-bar');
         return parseFloat(pb.attr('aria-valuenow')) / parseFloat(pb.attr('aria-valuemax'));
@@ -55,6 +55,7 @@ if (window.watchcontrolsInjected != true || !sessionid) {
     let parts = event.data.split(" ");
     switch (parts[0]) {
       case "sir":
+        //FIXME set variable and set up messages for popup
         $('#watcher-num').html(parts[1] + " user(s) in session");
         break;
       case "play":
@@ -71,10 +72,12 @@ if (window.watchcontrolsInjected != true || !sessionid) {
     }
   };
   
-  skip(slider[0], 0);
+  //FIXME playing needs to work without controls visible
+  console.log(site.playing());
   if (site.playing()) {
     pauseButton.click();
   }
+  skip(slider[0], 0);
 
   playButton[0].addEventListener("click", (event) => {
     if (event.isTrusted) {
@@ -89,7 +92,7 @@ if (window.watchcontrolsInjected != true || !sessionid) {
       }
     });
   }
-  slider[0].addEventListener("mousedown", () => (event) => {
+  slider[0].addEventListener("mousedown", (event) => {
     if (event.isTrusted) {
       socket.send("skip " + site.progress());
     }
