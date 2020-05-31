@@ -1,16 +1,12 @@
-if (window.watchcontrolsInjected != true) {
+if (window.watchcontrolsInjected != true || !sessionid) {
   window.watchcontrolsInjected = true;
   
-  let host = "localhost:8080";
   var siteTags = [
     {
       hostname: 'youtube.com',
-      playButton: '.ytp-play-button',
-      pauseButton: '.ytp-play-button',
-      playing: function () {
-        return $('.ytp-play-button').attr('title').includes("Pause");
-      },
-      slider: '.ytp-progress-list',
+      playButton: () => $('.ytp-play-button'),
+      playing: () => $('.playing-mode#movie_player').length > 0,
+      slider: () => $('.ytp-progress-bar'),
       progress: function () {
         let pb = $('.ytp-progress-bar');
         return parseFloat(pb.attr('aria-valuenow')) / parseFloat(pb.attr('aria-valuemax'));
@@ -18,13 +14,16 @@ if (window.watchcontrolsInjected != true) {
     },
     {
       hostname: 'netflix.com',
-      playButton: '.button-nfplayerPlay',
-      pauseButton: '.button-nfplayerPause',
-      playing: function () {
-        return $('.button-nfplayerPause').length > 0;
+      playButton: () => {
+        let button = $('.button-nfplayerPlay');
+        if (button.length > 0) {
+          return button;
+        }
+        return $('.button-nfplayerPause');
       },
-      slider: '.track',
-      progress: function () {
+      playing: () => $('.button-nfplayerPause').length > 0,
+      slider: () => $('.track'),
+      progress: () => {
         let pb = $('.scrubber-head');
         return parseFloat(pb.attr('aria-valuenow')) / parseFloat(pb.attr('aria-valuemax'));
       }
@@ -39,56 +38,67 @@ if (window.watchcontrolsInjected != true) {
     }
   }
 
-  let playButton = $(site.playButton);
-  let pauseButton = $(site.pauseButton);
-  let slider = $(site.slider);
+  let playButton = site.playButton();
+  let slider = site.slider();
+  let watchers = 1;
   
   console.log("hello sir");
+  console.log(sessionid);
   console.log(site);
   console.log(site.playing(), site.progress());
   
-  $.get("http://" + host + "/rand", function (data) {
-    var socket = new WebSocket('ws://' + host + "/chat/" + data);
-  
-    socket.onopen = function (event) {
-      socket.send('hello');
-    };
-    
-    socket.onmessage = function (event) {
-      console.log('Message from server ', event.data);
-      let parts = event.data.split(" ");
-      switch (parts[0]) {
-        case "sir":
-          $('#watcher-num').html(parts[1] + " user in session");
-          break;
-        case "play":
-          playButton.click();
-          break;
-        case "pause":
-          pauseButton.click();
-          break;
-        case "skip":
-          let progress = parseFloat(parts[1]);
-          let rect = slider[0].getBoundingClientRect(),
-              posX = rect.left, posY = rect.top;
-      
-          posX += progress * rect.width;
-          posY += rect.height / 2;
-          let click = new MouseEvent('mousedown', {bubbles: true, clientX: posX, clientY: posY});
-          slider.dispatchEvent(click);
-          click = new MouseEvent('mouseup', {bubbles: true, clientX: posX, clientY: posY});
-          slider.dispatchEvent(click);
-          break;
-        default:
-          break;
-      }
-    };
-  
-    playButton[0].addEventListener("click", () => socket.send("play"));
-    // some sites like netflix have different elements for play and pause
-    if (playButton[0] !== pauseButton[0]) {
-      pauseButton[0].addEventListener("click", () => socket.send("pause"));
+  var socket = new WebSocket('wss://84987f1a0bae.ngrok.io/chat/' + sessionid + '/');
+
+  socket.onmessage = function (event) {
+    console.log('Message from server ', event.data);
+    let parts = event.data.split(" ");
+    switch (parts[0]) {
+      case "sir":
+        watchers = parts[1];
+        chrome.runtime.sendMessage(parts[1]);
+        break;
+      case "play":
+        playButton.click();
+        break;
+      case "skip":
+        skip(slider[0], parseFloat(parts[1]));
+        break;
+      default:
+        break;
     }
-    slider[0].addEventListener("mousedown", () => socket.send("skip " + site.progress()));
+  };
+  
+  console.log(site.playing());
+  if (site.playing()) {
+    playButton.click();
+  }
+  skip(slider[0], 0);
+
+  playButton[0].addEventListener("click", (event) => {
+    if (event.isTrusted) {
+      socket.send("play");
+    }
   });
+  slider[0].addEventListener("mousedown", (event) => {
+    if (event.isTrusted) {
+      setTimeout(() => socket.send("skip " + site.progress()), 0);
+    }
+  });
+
+  // for responding to popup request for number in session
+  chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+    sendResponse(watchers);
+  });
+
+  function skip(elem, progress) {
+    let rect = elem.getBoundingClientRect(),
+        posX = rect.left, posY = rect.top;
+
+    posX += progress * rect.width;
+    posY += rect.height / 2;
+    let click = new MouseEvent('mousedown', {bubbles: true, clientX: posX, clientY: posY});
+    elem.dispatchEvent(click);
+    click = new MouseEvent('mouseup', {bubbles: true, clientX: posX, clientY: posY});
+    elem.dispatchEvent(click);
+  }
 }
