@@ -16,4 +16,7 @@ def rand(request):
             break
     temp = models.ServerID(id = newID)
     temp.save()
-    return HttpResponse(temp.id)
+    resp =  HttpResponse(temp.id) 
+    resp["Access-Control-Allow-Origin"] = "*"
+    print(resp)
+    return resp
