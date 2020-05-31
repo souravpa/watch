@@ -59,6 +59,7 @@
         case "sir":
           watchers = parts[1];
           chrome.runtime.sendMessage(parts[1]);
+          resetPlayback();
           break;
         case "play":
           playButton.click();
@@ -70,20 +71,16 @@
           break;
       }
     };
-    
-    console.log(site.playing());
-    if (site.playing()) {
-      playButton.click();
-    }
-    skip(slider[0], 0);
   
     playButton[0].addEventListener("click", (event) => {
       if (event.isTrusted) {
+        console.log("sending play click");
         socket.send("play");
       }
     });
     slider[0].addEventListener("mousedown", (event) => {
       if (event.isTrusted) {
+        console.log("sending slider click");
         setTimeout(() => socket.send("skip " + site.progress()), 0);
       }
     });
@@ -103,6 +100,13 @@
       elem.dispatchEvent(click);
       click = new MouseEvent('mouseup', {bubbles: true, clientX: posX, clientY: posY});
       elem.dispatchEvent(click);
+    }
+
+    function resetPlayback() {
+      if (site.playing()) {
+        playButton.click();
+      }
+      skip(slider[0], 0);
     }
 
     window.watchcontrolsInjected = true;
