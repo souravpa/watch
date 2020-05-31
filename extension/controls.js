@@ -93,8 +93,9 @@ if (window.watchcontrolsInjected != true || !sessionid) {
     });
   }
   slider[0].addEventListener("mousedown", (event) => {
+    console.log(site.progress());
     if (event.isTrusted) {
-      socket.send("skip " + site.progress());
+      setTimeout(() => socket.send("skip " + site.progress()), 0);
     }
   });
 
