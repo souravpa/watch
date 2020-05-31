@@ -1,5 +1,4 @@
 'use strict';
-//FIXME allows creator of session to create multiple for same video
 
 chrome.tabs.query({currentWindow: true, active: true}, function(tabs){
   let url = new URL(tabs[0].url);
@@ -49,5 +48,11 @@ chrome.tabs.query({currentWindow: true, active: true}, function(tabs){
 });
 
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
-  $('#watcher-num').html(message + " user(s) in session");
+  if (message == 'error') {
+    document.getElementById('create').classList.add('hidden');
+    document.getElementById('session').classList.add('hidden');
+    document.getElementById('error').classList.remove('hidden');
+  } else {
+    $('#watcher-num').html(message + " user(s) in session");
+  }
 });
