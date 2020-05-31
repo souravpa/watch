@@ -4,12 +4,9 @@ if (window.watchcontrolsInjected != true || !sessionid) {
   var siteTags = [
     {
       hostname: 'youtube.com',
-      playButton: '.ytp-play-button',
-      pauseButton: '.ytp-play-button',
-      playing: function () {
-        return $('.playing-mode#movie_player').length > 0;
-      },
-      slider: '.ytp-progress-bar',
+      playButton: () => $('.ytp-play-button'),
+      playing: () => $('.playing-mode#movie_player').length > 0,
+      slider: () => $('.ytp-progress-bar'),
       progress: function () {
         let pb = $('.ytp-progress-bar');
         return parseFloat(pb.attr('aria-valuenow')) / parseFloat(pb.attr('aria-valuemax'));
@@ -17,13 +14,16 @@ if (window.watchcontrolsInjected != true || !sessionid) {
     },
     {
       hostname: 'netflix.com',
-      playButton: '.button-nfplayerPlay',
-      pauseButton: '.button-nfplayerPause',
-      playing: function () {
-        return $('.button-nfplayerPause').length > 0;
+      playButton: () => {
+        let button = $('.button-nfplayerPlay');
+        if (button.length > 0) {
+          return button;
+        }
+        return $('.button-nfplayerPause');
       },
-      slider: '.track',
-      progress: function () {
+      playing: () => $('.button-nfplayerPause').length > 0,
+      slider: () => $('.track'),
+      progress: () => {
         let pb = $('.scrubber-head');
         return parseFloat(pb.attr('aria-valuenow')) / parseFloat(pb.attr('aria-valuemax'));
       }
@@ -38,31 +38,27 @@ if (window.watchcontrolsInjected != true || !sessionid) {
     }
   }
 
-  let playButton = $(site.playButton);
-  let pauseButton = $(site.pauseButton);
-  let slider = $(site.slider);
+  let playButton = site.playButton();
+  let slider = site.slider();
+  let watchers = 1;
   
   console.log("hello sir");
   console.log(sessionid);
   console.log(site);
   console.log(site.playing(), site.progress());
   
-  // var socket = new WebSocket('ws://54.237.10.199/chat/' + sessionid);
-  var socket = new WebSocket('wss://bb0cf5981d16.ngrok.io/chat/' + sessionid + '/');
+  var socket = new WebSocket('wss://84987f1a0bae.ngrok.io/chat/' + sessionid + '/');
 
   socket.onmessage = function (event) {
     console.log('Message from server ', event.data);
     let parts = event.data.split(" ");
     switch (parts[0]) {
       case "sir":
-        //FIXME set variable and set up messages for popup
-        $('#watcher-num').html(parts[1] + " user(s) in session");
+        watchers = parts[1];
+        chrome.runtime.sendMessage(parts[1]);
         break;
       case "play":
         playButton.click();
-        break;
-      case "pause":
-        pauseButton.click();
         break;
       case "skip":
         skip(slider[0], parseFloat(parts[1]));
@@ -72,10 +68,9 @@ if (window.watchcontrolsInjected != true || !sessionid) {
     }
   };
   
-  //FIXME playing needs to work without controls visible
   console.log(site.playing());
   if (site.playing()) {
-    pauseButton.click();
+    playButton.click();
   }
   skip(slider[0], 0);
 
@@ -84,19 +79,15 @@ if (window.watchcontrolsInjected != true || !sessionid) {
       socket.send("play");
     }
   });
-  // some sites like netflix have different elements for play and pause
-  if (playButton[0] !== pauseButton[0]) {
-    pauseButton[0].addEventListener("click", (event) => {
-      if (event.isTrusted) {
-        socket.send("pause");
-      }
-    });
-  }
   slider[0].addEventListener("mousedown", (event) => {
-    console.log(site.progress());
     if (event.isTrusted) {
       setTimeout(() => socket.send("skip " + site.progress()), 0);
     }
+  });
+
+  // for responding to popup request for number in session
+  chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+    sendResponse(watchers);
   });
 
   function skip(elem, progress) {
