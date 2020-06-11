@@ -12,6 +12,9 @@ class ChatConsumer(WebsocketConsumer):
         print(self.scope['url_route']['kwargs'])
         self.room_name = self.scope['url_route']['kwargs']['sessionid']
         self.room_group_name = 'chat_%s' % self.room_name    
+        if (not models.ServerID.objects.filter(id=self.room_name).exists()):
+            self.send(text_data="not found")
+            return
         session = models.ServerID.objects.get(id=self.room_name)
         session.num_connected+=1
         session.save()
@@ -36,6 +39,9 @@ class ChatConsumer(WebsocketConsumer):
     def disconnect(self, close_code):
         # Leave room group
         message = "hihi"
+        if (not models.ServerID.objects.filter(id=self.room_name).exists()):
+            self.send(text_data="not found")
+            return
         session = models.ServerID.objects.get(id=self.room_name)
         if (session.num_connected == 1):
             print("removed")
