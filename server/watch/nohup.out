@@ -1,0 +1,663 @@
+Watching for file changes with StatReloader
+Invalid HTTP_HOST header: '84987f1a0bae.ngrok.io'. You may need to add '84987f1a0bae.ngrok.io' to ALLOWED_HOSTS.
+Bad Request: /rand
+HTTP GET /rand 400 [0.05, 127.0.0.1:52366]
+Invalid HTTP_HOST header: '84987f1a0bae.ngrok.io'. You may need to add '84987f1a0bae.ngrok.io' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+HTTP GET /favicon.ico 400 [0.03, 127.0.0.1:52366]
+/home/ubuntu/watch/server/watch/watch/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 31, 2020 - 20:50:34
+Django version 3.0.6, using settings 'watch.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+HTTP GET /rand 200 [0.01, 127.0.0.1:52368]
+Not Found: /favicon.ico
+HTTP GET /favicon.ico 404 [0.01, 127.0.0.1:52368]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52370]
+WebSocket HANDSHAKING /chat/1747731503134613189/ [127.0.0.1:52372]
+WebSocket CONNECT /chat/1747731503134613189/ [127.0.0.1:52372]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52378]
+WebSocket DISCONNECT /chat/1747731503134613189/ [127.0.0.1:52372]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52378]
+WebSocket HANDSHAKING /chat/8065633156708715802/ [127.0.0.1:52380]
+WebSocket CONNECT /chat/8065633156708715802/ [127.0.0.1:52380]
+WebSocket DISCONNECT /chat/8065633156708715802/ [127.0.0.1:52380]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52378]
+WebSocket HANDSHAKING /chat/5235458131861074485/ [127.0.0.1:52384]
+WebSocket CONNECT /chat/5235458131861074485/ [127.0.0.1:52384]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52388]
+WebSocket DISCONNECT /chat/5235458131861074485/ [127.0.0.1:52384]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52388]
+WebSocket HANDSHAKING /chat/5454235958827033209/ [127.0.0.1:52390]
+WebSocket CONNECT /chat/5454235958827033209/ [127.0.0.1:52390]
+WebSocket DISCONNECT /chat/5454235958827033209/ [127.0.0.1:52390]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52394]
+WebSocket HANDSHAKING /chat/7486579666787285341/ [127.0.0.1:52396]
+WebSocket CONNECT /chat/7486579666787285341/ [127.0.0.1:52396]
+WebSocket DISCONNECT /chat/7486579666787285341/ [127.0.0.1:52396]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52394]
+WebSocket HANDSHAKING /chat/7466599925458350754/ [127.0.0.1:52400]
+WebSocket CONNECT /chat/7466599925458350754/ [127.0.0.1:52400]
+WebSocket DISCONNECT /chat/7466599925458350754/ [127.0.0.1:52400]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52394]
+WebSocket HANDSHAKING /chat/555486298536354785/ [127.0.0.1:52404]
+WebSocket CONNECT /chat/555486298536354785/ [127.0.0.1:52404]
+WebSocket DISCONNECT /chat/555486298536354785/ [127.0.0.1:52404]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52408]
+WebSocket HANDSHAKING /chat/5360648295655255785/ [127.0.0.1:52410]
+WebSocket CONNECT /chat/5360648295655255785/ [127.0.0.1:52410]
+WebSocket HANDSHAKING /chat/5360648295655255785/ [127.0.0.1:52414]
+WebSocket CONNECT /chat/5360648295655255785/ [127.0.0.1:52414]
+WebSocket DISCONNECT /chat/5360648295655255785/ [127.0.0.1:52414]
+WebSocket DISCONNECT /chat/5360648295655255785/ [127.0.0.1:52410]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52416]
+WebSocket HANDSHAKING /chat/5532351475192462756/ [127.0.0.1:52418]
+WebSocket CONNECT /chat/5532351475192462756/ [127.0.0.1:52418]
+WebSocket DISCONNECT /chat/5532351475192462756/ [127.0.0.1:52418]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52416]
+WebSocket HANDSHAKING /chat/2246200039329324929/ [127.0.0.1:52422]
+WebSocket CONNECT /chat/2246200039329324929/ [127.0.0.1:52422]
+WebSocket DISCONNECT /chat/2246200039329324929/ [127.0.0.1:52422]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52426]
+WebSocket HANDSHAKING /chat/2351094555010913461/ [127.0.0.1:52428]
+WebSocket CONNECT /chat/2351094555010913461/ [127.0.0.1:52428]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52426]
+WebSocket DISCONNECT /chat/2351094555010913461/ [127.0.0.1:52428]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52432]
+WebSocket HANDSHAKING /chat/1710638321110295561/ [127.0.0.1:52434]
+WebSocket CONNECT /chat/1710638321110295561/ [127.0.0.1:52434]
+WebSocket DISCONNECT /chat/1710638321110295561/ [127.0.0.1:52434]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52438]
+WebSocket HANDSHAKING /chat/3041976006773815355/ [127.0.0.1:52440]
+WebSocket CONNECT /chat/3041976006773815355/ [127.0.0.1:52440]
+WebSocket HANDSHAKING /chat/3041976006773815355/ [127.0.0.1:52444]
+WebSocket CONNECT /chat/3041976006773815355/ [127.0.0.1:52444]
+WebSocket DISCONNECT /chat/3041976006773815355/ [127.0.0.1:52444]
+WebSocket DISCONNECT /chat/3041976006773815355/ [127.0.0.1:52440]
+/home/ubuntu/watch/server/watch/chat/consumers.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 31, 2020 - 20:56:19
+Django version 3.0.6, using settings 'watch.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+{'sessionid': '1747731503134613189'}
+added
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+removed
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+{'sessionid': '8065633156708715802'}
+added
+removed
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+{'sessionid': '5235458131861074485'}
+added
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+removed
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+{'sessionid': '5454235958827033209'}
+added
+removed
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+{'sessionid': '7486579666787285341'}
+added
+removed
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+{'sessionid': '7466599925458350754'}
+added
+removed
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+{'sessionid': '555486298536354785'}
+added
+removed
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+{'sessionid': '5360648295655255785'}
+added
+{'sessionid': '5360648295655255785'}
+added
+removed
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+{'sessionid': '5532351475192462756'}
+added
+removed
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+{'sessionid': '2246200039329324929'}
+added
+removed
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+{'sessionid': '2351094555010913461'}
+added
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+removed
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+{'sessionid': '1710638321110295561'}
+added
+removed
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+{'sessionid': '3041976006773815355'}
+added
+{'sessionid': '3041976006773815355'}
+added
+removed
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+HTTP GET /rand 200 [0.01, 127.0.0.1:52452]
+WebSocket HANDSHAKING /chat/1163171898413590459/ [127.0.0.1:52454]
+WebSocket CONNECT /chat/1163171898413590459/ [127.0.0.1:52454]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52452]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52452]
+WebSocket DISCONNECT /chat/1163171898413590459/ [127.0.0.1:52454]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52452]
+WebSocket HANDSHAKING /chat/9221036335481805597/ [127.0.0.1:52460]
+WebSocket CONNECT /chat/9221036335481805597/ [127.0.0.1:52460]
+WebSocket HANDSHAKING /chat/9221036335481805597/ [127.0.0.1:52462]
+WebSocket CONNECT /chat/9221036335481805597/ [127.0.0.1:52462]
+WebSocket DISCONNECT /chat/9221036335481805597/ [127.0.0.1:52462]
+/home/ubuntu/watch/server/watch/chat/consumers.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 31, 2020 - 21:43:37
+Django version 3.0.6, using settings 'watch.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+{'sessionid': '1163171898413590459'}
+added
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+removed
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+{'sessionid': '9221036335481805597'}
+added
+{'sessionid': '9221036335481805597'}
+added
+Watching for file changes with StatReloader
+WebSocket HANDSHAKING /chat/9221036335481805597/ [127.0.0.1:52464]
+WebSocket CONNECT /chat/9221036335481805597/ [127.0.0.1:52464]
+WebSocket DISCONNECT /chat/9221036335481805597/ [127.0.0.1:52464]
+/home/ubuntu/watch/server/watch/chat/consumers.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 31, 2020 - 21:50:44
+Django version 3.0.6, using settings 'watch.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+{'sessionid': '9221036335481805597'}
+added
+sir 2
+Watching for file changes with StatReloader
+WebSocket HANDSHAKING /chat/9221036335481805597/ [127.0.0.1:52470]
+WebSocket CONNECT /chat/9221036335481805597/ [127.0.0.1:52470]
+WebSocket DISCONNECT /chat/9221036335481805597/ [127.0.0.1:52470]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52476]
+WebSocket HANDSHAKING /chat/3743649434344689476/ [127.0.0.1:52478]
+WebSocket CONNECT /chat/3743649434344689476/ [127.0.0.1:52478]
+WebSocket HANDSHAKING /chat/3743649434344689476/ [127.0.0.1:52480]
+WebSocket CONNECT /chat/3743649434344689476/ [127.0.0.1:52480]
+WebSocket DISCONNECT /chat/3743649434344689476/ [127.0.0.1:52480]
+WebSocket DISCONNECT /chat/3743649434344689476/ [127.0.0.1:52478]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52482]
+WebSocket HANDSHAKING /chat/7285534185155121056/ [127.0.0.1:52484]
+WebSocket CONNECT /chat/7285534185155121056/ [127.0.0.1:52484]
+WebSocket DISCONNECT /chat/7285534185155121056/ [127.0.0.1:52484]
+WebSocket HANDSHAKING /chat/7285534185155121056/ [127.0.0.1:52486]
+Exception inside application: ServerID matching query does not exist.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/sessions.py", line 183, in __call__
+    return await self.inner(receive, self.send)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/middleware.py", line 41, in coroutine_call
+    await inner_instance(receive, send)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/consumer.py", line 59, in __call__
+    [receive, self.channel_receive], self.dispatch
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/utils.py", line 51, in await_many_dispatch
+    await dispatch(result)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/asgiref/sync.py", line 224, in __call__
+    return await asyncio.wait_for(future, timeout=None)
+  File "/usr/lib/python3.6/asyncio/tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/db.py", line 14, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/asgiref/sync.py", line 249, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/consumer.py", line 105, in dispatch
+    handler(message)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/generic/websocket.py", line 39, in websocket_connect
+    self.connect()
+  File "/home/ubuntu/watch/server/watch/chat/consumers.py", line 14, in connect
+    session = models.ServerID.objects.get(id=self.room_name)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/query.py", line 417, in get
+    self.model._meta.object_name
+chat.models.ServerID.DoesNotExist: ServerID matching query does not exist.
+WebSocket DISCONNECT /chat/7285534185155121056/ [127.0.0.1:52486]
+WebSocket HANDSHAKING /chat/7285534185155121056/ [127.0.0.1:52488]
+Exception inside application: ServerID matching query does not exist.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/sessions.py", line 183, in __call__
+    return await self.inner(receive, self.send)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/middleware.py", line 41, in coroutine_call
+    await inner_instance(receive, send)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/consumer.py", line 59, in __call__
+    [receive, self.channel_receive], self.dispatch
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/utils.py", line 51, in await_many_dispatch
+    await dispatch(result)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/asgiref/sync.py", line 224, in __call__
+    return await asyncio.wait_for(future, timeout=None)
+  File "/usr/lib/python3.6/asyncio/tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/db.py", line 14, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/asgiref/sync.py", line 249, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/consumer.py", line 105, in dispatch
+    handler(message)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/generic/websocket.py", line 39, in websocket_connect
+    self.connect()
+  File "/home/ubuntu/watch/server/watch/chat/consumers.py", line 14, in connect
+    session = models.ServerID.objects.get(id=self.room_name)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/query.py", line 417, in get
+    self.model._meta.object_name
+chat.models.ServerID.DoesNotExist: ServerID matching query does not exist.
+WebSocket DISCONNECT /chat/7285534185155121056/ [127.0.0.1:52488]
+WebSocket HANDSHAKING /chat/7285534185155121056/ [127.0.0.1:52490]
+Exception inside application: ServerID matching query does not exist.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/sessions.py", line 183, in __call__
+    return await self.inner(receive, self.send)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/middleware.py", line 41, in coroutine_call
+    await inner_instance(receive, send)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/consumer.py", line 59, in __call__
+    [receive, self.channel_receive], self.dispatch
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/utils.py", line 51, in await_many_dispatch
+    await dispatch(result)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/asgiref/sync.py", line 224, in __call__
+    return await asyncio.wait_for(future, timeout=None)
+  File "/usr/lib/python3.6/asyncio/tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/db.py", line 14, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/asgiref/sync.py", line 249, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/consumer.py", line 105, in dispatch
+    handler(message)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/generic/websocket.py", line 39, in websocket_connect
+    self.connect()
+  File "/home/ubuntu/watch/server/watch/chat/consumers.py", line 14, in connect
+    session = models.ServerID.objects.get(id=self.room_name)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/query.py", line 417, in get
+    self.model._meta.object_name
+chat.models.ServerID.DoesNotExist: ServerID matching query does not exist.
+WebSocket DISCONNECT /chat/7285534185155121056/ [127.0.0.1:52490]
+WebSocket HANDSHAKING /chat/7285534185155121056/ [127.0.0.1:52492]
+Exception inside application: ServerID matching query does not exist.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/sessions.py", line 183, in __call__
+    return await self.inner(receive, self.send)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/middleware.py", line 41, in coroutine_call
+    await inner_instance(receive, send)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/consumer.py", line 59, in __call__
+    [receive, self.channel_receive], self.dispatch
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/utils.py", line 51, in await_many_dispatch
+    await dispatch(result)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/asgiref/sync.py", line 224, in __call__
+    return await asyncio.wait_for(future, timeout=None)
+  File "/usr/lib/python3.6/asyncio/tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/db.py", line 14, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/asgiref/sync.py", line 249, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/consumer.py", line 105, in dispatch
+    handler(message)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/generic/websocket.py", line 39, in websocket_connect
+    self.connect()
+  File "/home/ubuntu/watch/server/watch/chat/consumers.py", line 14, in connect
+    session = models.ServerID.objects.get(id=self.room_name)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/query.py", line 417, in get
+    self.model._meta.object_name
+chat.models.ServerID.DoesNotExist: ServerID matching query does not exist.
+WebSocket DISCONNECT /chat/7285534185155121056/ [127.0.0.1:52492]
+WebSocket HANDSHAKING /chat/7285534185155121056/ [127.0.0.1:52494]
+Exception inside application: ServerID matching query does not exist.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/sessions.py", line 183, in __call__
+    return await self.inner(receive, self.send)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/middleware.py", line 41, in coroutine_call
+    await inner_instance(receive, send)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/consumer.py", line 59, in __call__
+    [receive, self.channel_receive], self.dispatch
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/utils.py", line 51, in await_many_dispatch
+    await dispatch(result)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/asgiref/sync.py", line 224, in __call__
+    return await asyncio.wait_for(future, timeout=None)
+  File "/usr/lib/python3.6/asyncio/tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/db.py", line 14, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/asgiref/sync.py", line 249, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/consumer.py", line 105, in dispatch
+    handler(message)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/generic/websocket.py", line 39, in websocket_connect
+    self.connect()
+  File "/home/ubuntu/watch/server/watch/chat/consumers.py", line 14, in connect
+    session = models.ServerID.objects.get(id=self.room_name)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/query.py", line 417, in get
+    self.model._meta.object_name
+chat.models.ServerID.DoesNotExist: ServerID matching query does not exist.
+WebSocket DISCONNECT /chat/7285534185155121056/ [127.0.0.1:52494]
+WebSocket HANDSHAKING /chat/7285534185155121056/ [127.0.0.1:52496]
+Exception inside application: ServerID matching query does not exist.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/sessions.py", line 183, in __call__
+    return await self.inner(receive, self.send)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/middleware.py", line 41, in coroutine_call
+    await inner_instance(receive, send)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/consumer.py", line 59, in __call__
+    [receive, self.channel_receive], self.dispatch
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/utils.py", line 51, in await_many_dispatch
+    await dispatch(result)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/asgiref/sync.py", line 224, in __call__
+    return await asyncio.wait_for(future, timeout=None)
+  File "/usr/lib/python3.6/asyncio/tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/db.py", line 14, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/asgiref/sync.py", line 249, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/consumer.py", line 105, in dispatch
+    handler(message)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/generic/websocket.py", line 39, in websocket_connect
+    self.connect()
+  File "/home/ubuntu/watch/server/watch/chat/consumers.py", line 14, in connect
+    session = models.ServerID.objects.get(id=self.room_name)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/query.py", line 417, in get
+    self.model._meta.object_name
+chat.models.ServerID.DoesNotExist: ServerID matching query does not exist.
+WebSocket DISCONNECT /chat/7285534185155121056/ [127.0.0.1:52496]
+/home/ubuntu/.local/lib/python3.6/site-packages/asgiref/sync.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 31, 2020 - 21:52:51
+Django version 3.0.6, using settings 'watch.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+{'sessionid': '9221036335481805597'}
+added
+sir 2
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+{'sessionid': '3743649434344689476'}
+added
+{'sessionid': '3743649434344689476'}
+added
+sir 2
+removed
+sir 1
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+{'sessionid': '7285534185155121056'}
+added
+removed
+sir 1
+{'sessionid': '7285534185155121056'}
+{'sessionid': '7285534185155121056'}
+{'sessionid': '7285534185155121056'}
+{'sessionid': '7285534185155121056'}
+{'sessionid': '7285534185155121056'}
+{'sessionid': '7285534185155121056'}
+Traceback (most recent call last):
+  File "manage.py", line 8, in <module>
+    from django.core.management import execute_from_command_line
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/management/__init__.py", line 14, in <module>
+    from django.core.management.base import (
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/management/base.py", line 11, in <module>
+    from django.core import checks
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/checks/__init__.py", line 8, in <module>
+    import django.core.checks.caches  # NOQA isort:skip
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/checks/caches.py", line 2, in <module>
+    from django.core.cache import DEFAULT_CACHE_ALIAS
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/cache/__init__.py", line 15, in <module>
+    from asgiref.local import Local
+ModuleNotFoundError: No module named 'asgiref.local'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "manage.py", line 14, in <module>
+    ) from exc
+ImportError: Couldn't import Django. Are you sure it's installed and available on your PYTHONPATH environment variable? Did you forget to activate a virtual environment?
+Watching for file changes with StatReloader
+/home/ubuntu/.local/lib/python3.6/site-packages/daphne/server.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 31, 2020 - 22:06:10
+Django version 3.0.6, using settings 'watch.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+WebSocket HANDSHAKING /chat/7285534185155121056/ [127.0.0.1:52522]
+Exception inside application: ServerID matching query does not exist.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/sessions.py", line 183, in __call__
+    return await self.inner(receive, self.send)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/middleware.py", line 41, in coroutine_call
+    await inner_instance(receive, send)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/consumer.py", line 59, in __call__
+    [receive, self.channel_receive], self.dispatch
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/utils.py", line 51, in await_many_dispatch
+    await dispatch(result)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/asgiref/sync.py", line 269, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "/usr/lib/python3.6/asyncio/tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/db.py", line 14, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/asgiref/sync.py", line 314, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/consumer.py", line 105, in dispatch
+    handler(message)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/generic/websocket.py", line 39, in websocket_connect
+    self.connect()
+  File "/home/ubuntu/watch/server/watch/chat/consumers.py", line 14, in connect
+    session = models.ServerID.objects.get(id=self.room_name)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/query.py", line 417, in get
+    self.model._meta.object_name
+chat.models.ServerID.DoesNotExist: ServerID matching query does not exist.
+WebSocket DISCONNECT /chat/7285534185155121056/ [127.0.0.1:52522]
+WebSocket HANDSHAKING /chat/7285534185155121056/ [127.0.0.1:52524]
+Exception inside application: ServerID matching query does not exist.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/sessions.py", line 183, in __call__
+    return await self.inner(receive, self.send)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/middleware.py", line 41, in coroutine_call
+    await inner_instance(receive, send)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/consumer.py", line 59, in __call__
+    [receive, self.channel_receive], self.dispatch
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/utils.py", line 51, in await_many_dispatch
+    await dispatch(result)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/asgiref/sync.py", line 269, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "/usr/lib/python3.6/asyncio/tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/db.py", line 14, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/asgiref/sync.py", line 314, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/consumer.py", line 105, in dispatch
+    handler(message)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/channels/generic/websocket.py", line 39, in websocket_connect
+    self.connect()
+  File "/home/ubuntu/watch/server/watch/chat/consumers.py", line 14, in connect
+    session = models.ServerID.objects.get(id=self.room_name)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/db/models/query.py", line 417, in get
+    self.model._meta.object_name
+chat.models.ServerID.DoesNotExist: ServerID matching query does not exist.
+WebSocket DISCONNECT /chat/7285534185155121056/ [127.0.0.1:52524]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52528]
+WebSocket HANDSHAKING /chat/6295359659481765370/ [127.0.0.1:52530]
+WebSocket CONNECT /chat/6295359659481765370/ [127.0.0.1:52530]
+WebSocket DISCONNECT /chat/6295359659481765370/ [127.0.0.1:52530]
+/home/ubuntu/watch/server/watch/chat/consumers.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 31, 2020 - 22:06:42
+Django version 3.0.6, using settings 'watch.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+{'sessionid': '7285534185155121056'}
+{'sessionid': '7285534185155121056'}
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+{'sessionid': '6295359659481765370'}
+added
+removed
+sir 1
+Watching for file changes with StatReloader
+HTTP GET /rand 200 [0.01, 127.0.0.1:52536]
+WebSocket HANDSHAKING /chat/4516465223162659216/ [127.0.0.1:52538]
+WebSocket CONNECT /chat/4516465223162659216/ [127.0.0.1:52538]
+WebSocket HANDSHAKING /chat/4516465223162659216/ [127.0.0.1:52544]
+WebSocket CONNECT /chat/4516465223162659216/ [127.0.0.1:52544]
+WebSocket DISCONNECT /chat/4516465223162659216/ [127.0.0.1:52544]
+WebSocket HANDSHAKING /chat/4516465223162659216/ [127.0.0.1:52546]
+WebSocket CONNECT /chat/4516465223162659216/ [127.0.0.1:52546]
+WebSocket DISCONNECT /chat/4516465223162659216/ [127.0.0.1:52546]
+/home/ubuntu/watch/server/watch/chat/consumers.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 31, 2020 - 22:17:48
+Django version 3.0.6, using settings 'watch.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+<HttpResponse status_code=200, "text/html; charset=utf-8">
+{'sessionid': '4516465223162659216'}
+added
+{'sessionid': '4516465223162659216'}
+added
+sir 1
+{'sessionid': '4516465223162659216'}
+added
+sir 1
+Watching for file changes with StatReloader
+WebSocket HANDSHAKING /chat/4516465223162659216/ [127.0.0.1:52548]
+WebSocket CONNECT /chat/4516465223162659216/ [127.0.0.1:52548]
+WebSocket HANDSHAKING /chat/4516465223162659216/ [127.0.0.1:52554]
+WebSocket CONNECT /chat/4516465223162659216/ [127.0.0.1:52554]
+WebSocket DISCONNECT /chat/4516465223162659216/ [127.0.0.1:52554]
+WebSocket HANDSHAKING /chat/4516465223162659216/ [127.0.0.1:52558]
+WebSocket CONNECT /chat/4516465223162659216/ [127.0.0.1:52558]
+WebSocket DISCONNECT /chat/4516465223162659216/ [127.0.0.1:52558]
+WebSocket DISCONNECT /chat/4516465223162659216/ [127.0.0.1:52548]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52560]
+WebSocket HANDSHAKING /chat/2216667251109170325/ [127.0.0.1:52562]
+WebSocket CONNECT /chat/2216667251109170325/ [127.0.0.1:52562]
+WebSocket HANDSHAKING /chat/2216667251109170325/ [127.0.0.1:52564]
+WebSocket CONNECT /chat/2216667251109170325/ [127.0.0.1:52564]
+WebSocket DISCONNECT /chat/2216667251109170325/ [127.0.0.1:52564]
+WebSocket HANDSHAKING /chat/2216667251109170325/ [127.0.0.1:52566]
+WebSocket CONNECT /chat/2216667251109170325/ [127.0.0.1:52566]
+WebSocket DISCONNECT /chat/2216667251109170325/ [127.0.0.1:52566]
+WebSocket HANDSHAKING /chat/2216667251109170325/ [127.0.0.1:52570]
+WebSocket CONNECT /chat/2216667251109170325/ [127.0.0.1:52570]
+WebSocket DISCONNECT /chat/2216667251109170325/ [127.0.0.1:52562]
+WebSocket DISCONNECT /chat/2216667251109170325/ [127.0.0.1:52570]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52572]
+WebSocket HANDSHAKING /chat/5030933059956038958/ [127.0.0.1:52574]
+WebSocket CONNECT /chat/5030933059956038958/ [127.0.0.1:52574]
+WebSocket HANDSHAKING /chat/5030933059956038958/ [127.0.0.1:52576]
+WebSocket CONNECT /chat/5030933059956038958/ [127.0.0.1:52576]
+WebSocket DISCONNECT /chat/5030933059956038958/ [127.0.0.1:52574]
+WebSocket HANDSHAKING /chat/5030933059956038958/ [127.0.0.1:52578]
+WebSocket CONNECT /chat/5030933059956038958/ [127.0.0.1:52578]
+WebSocket DISCONNECT /chat/5030933059956038958/ [127.0.0.1:52578]
+HTTP GET /rand 200 [0.02, 127.0.0.1:52580]
+WebSocket HANDSHAKING /chat/6831595061899727112/ [127.0.0.1:52582]
+WebSocket CONNECT /chat/6831595061899727112/ [127.0.0.1:52582]
+WebSocket DISCONNECT /chat/5030933059956038958/ [127.0.0.1:52576]
+WebSocket HANDSHAKING /chat/6831595061899727112/ [127.0.0.1:52584]
+WebSocket CONNECT /chat/6831595061899727112/ [127.0.0.1:52584]
+WebSocket DISCONNECT /chat/6831595061899727112/ [127.0.0.1:52584]
+WebSocket DISCONNECT /chat/6831595061899727112/ [127.0.0.1:52582]
+HTTP GET /rand 200 [0.01, 127.0.0.1:52768]
+WebSocket HANDSHAKING /chat/7933718398349548557/ [127.0.0.1:52770]
+WebSocket CONNECT /chat/7933718398349548557/ [127.0.0.1:52770]
+WebSocket HANDSHAKING /chat/7933718398349548557/ [127.0.0.1:52772]
+WebSocket CONNECT /chat/7933718398349548557/ [127.0.0.1:52772]
+WebSocket DISCONNECT /chat/7933718398349548557/ [127.0.0.1:52772]
+WebSocket DISCONNECT /chat/7933718398349548557/ [127.0.0.1:52770]
+HTTP GET /rand 200 [0.01, 127.0.0.1:53452]
+HTTP GET /rand 200 [0.01, 127.0.0.1:53456]
+HTTP GET /rand 200 [0.01, 127.0.0.1:53458]
+WebSocket HANDSHAKING /chat/6449113592342810819/ [127.0.0.1:53460]
+WebSocket CONNECT /chat/6449113592342810819/ [127.0.0.1:53460]
+WebSocket HANDSHAKING /chat/6449113592342810819/ [127.0.0.1:53462]
+WebSocket CONNECT /chat/6449113592342810819/ [127.0.0.1:53462]
+WebSocket DISCONNECT /chat/6449113592342810819/ [127.0.0.1:53460]
+HTTP GET /rand 200 [0.01, 127.0.0.1:53464]
+WebSocket HANDSHAKING /chat/5255886326140909717/ [127.0.0.1:53466]
+WebSocket CONNECT /chat/5255886326140909717/ [127.0.0.1:53466]
+WebSocket DISCONNECT /chat/6449113592342810819/ [127.0.0.1:53462]
+WebSocket HANDSHAKING /chat/5255886326140909717/ [127.0.0.1:53468]
+WebSocket CONNECT /chat/5255886326140909717/ [127.0.0.1:53468]
+WebSocket DISCONNECT /chat/5255886326140909717/ [127.0.0.1:53466]
+HTTP GET /rand 200 [0.01, 127.0.0.1:53470]
+WebSocket HANDSHAKING /chat/9132507189431765160/ [127.0.0.1:53472]
+WebSocket CONNECT /chat/9132507189431765160/ [127.0.0.1:53472]
+WebSocket DISCONNECT /chat/5255886326140909717/ [127.0.0.1:53468]
+WebSocket HANDSHAKING /chat/9132507189431765160/ [127.0.0.1:53474]
+WebSocket CONNECT /chat/9132507189431765160/ [127.0.0.1:53474]
+WebSocket DISCONNECT /chat/9132507189431765160/ [127.0.0.1:53472]
+HTTP GET /rand 200 [0.01, 127.0.0.1:53476]
+WebSocket HANDSHAKING /chat/8686680728309323173/ [127.0.0.1:53478]
+WebSocket CONNECT /chat/8686680728309323173/ [127.0.0.1:53478]
+WebSocket DISCONNECT /chat/9132507189431765160/ [127.0.0.1:53474]
+WebSocket HANDSHAKING /chat/8686680728309323173/ [127.0.0.1:53480]
+WebSocket CONNECT /chat/8686680728309323173/ [127.0.0.1:53480]
+WebSocket DISCONNECT /chat/8686680728309323173/ [127.0.0.1:53478]
+WebSocket DISCONNECT /chat/8686680728309323173/ [127.0.0.1:53480]
+HTTP GET /rand 200 [0.01, 127.0.0.1:53484]
+WebSocket HANDSHAKING /chat/3773232113137833422/ [127.0.0.1:53486]
+WebSocket CONNECT /chat/3773232113137833422/ [127.0.0.1:53486]
