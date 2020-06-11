@@ -1,5 +1,6 @@
+// TODO keypresses and screen clicks
 (function() {
-  if (window.watchcontrolsInjected != true || !sessionid) {    
+  if (window.watchcontrolsInjected != true || !sessionid) {
     var siteTags = [
       {
         hostname: 'youtube.com',
@@ -20,8 +21,9 @@
           }
           return $('.button-nfplayerPause');
         },
+        // FIXME button doesn't always update on netflix
         playing: () => $('.button-nfplayerPause').length > 0,
-        slider: () => $('.track'),
+        slider: () => $('.scrubber-container'),
         progress: () => {
           let pb = $('.scrubber-head');
           return parseFloat(pb.attr('aria-valuenow')) / parseFloat(pb.attr('aria-valuemax'));
@@ -57,31 +59,43 @@
       let parts = event.data.split(" ");
       switch (parts[0]) {
         case "sir":
-          watchers = parts[1];
+          watchers = parseInt(parts[1]);
           chrome.runtime.sendMessage(parts[1]);
-          resetPlayback();
+          if (watchers > 1) {
+            resetPlayback();
+          } 
           break;
         case "play":
           playButton.click();
           break;
         case "skip":
+          // FIXME sometimes skips to 0 - maybe fixed
           skip(slider[0], parseFloat(parts[1]));
           break;
-        default:
+        default: // keypress
+        
           break;
       }
     };
+
+    socket.onerror = function (error) {
+      chrome.runtime.sendMessage("error");
+    }
   
     playButton[0].addEventListener("click", (event) => {
       if (event.isTrusted) {
-        console.log("sending play click");
-        socket.send("play");
+        setTimeout(() => {
+          console.log("sending play click");
+          socket.send("play");
+        }, 0);
       }
     });
     slider[0].addEventListener("mousedown", (event) => {
       if (event.isTrusted) {
-        console.log("sending slider click");
-        setTimeout(() => socket.send("skip " + site.progress()), 0);
+        setTimeout(() => {
+          console.log("sending slider click " + site.progress());
+          socket.send("skip " + site.progress());
+        }, 0);
       }
     });
   
@@ -94,7 +108,7 @@
       let rect = elem.getBoundingClientRect(),
           posX = rect.left, posY = rect.top;
   
-      posX += progress * rect.width;
+      posX += Math.round(progress * rect.width);
       posY += rect.height / 2;
       let click = new MouseEvent('mousedown', {bubbles: true, clientX: posX, clientY: posY});
       elem.dispatchEvent(click);

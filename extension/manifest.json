@@ -1,7 +1,7 @@
 {
-  "name": "Getting Started Example",
+  "name": "wa+ch",
   "version": "1.0",
-  "description": "Build an Extension!",
+  "description": "Watch videos with synchronized playback with others",
   "permissions": ["activeTab", "declarativeContent", "storage"],
   "options_page": "options.html",
   "background": {
