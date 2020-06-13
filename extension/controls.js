@@ -1,4 +1,3 @@
-// TODO keypresses and screen clicks
 (function() {
   if (window.watchcontrolsInjected != true || !sessionid) {
     var siteTags = [
@@ -10,7 +9,8 @@
         progress: function () {
           let pb = $('.ytp-progress-bar');
           return parseFloat(pb.attr('aria-valuenow')) / parseFloat(pb.attr('aria-valuemax'));
-        }
+        },
+        keytarget: () => $('body')
       },
       {
         hostname: 'netflix.com',
@@ -27,7 +27,8 @@
         progress: () => {
           let pb = $('.scrubber-head');
           return parseFloat(pb.attr('aria-valuenow')) / parseFloat(pb.attr('aria-valuemax'));
-        }
+        },
+        keytarget: () => $('.NFPlayer')
       }
     ];
     
@@ -45,12 +46,14 @@
       chrome.runtime.sendMessage("error");
       return;
     }
+    let keytarget = site.keytarget();
     let watchers = 1;
     
     console.log("hello sir");
     console.log(sessionid);
     console.log(site);
     console.log(site.playing(), site.progress());
+    console.log(keytarget);
     
     var socket = new WebSocket('wss://84987f1a0bae.ngrok.io/chat/' + sessionid + '/');
   
@@ -72,8 +75,19 @@
           // FIXME sometimes skips to 0 - maybe fixed
           skip(slider[0], parseFloat(parts[1]));
           break;
-        default: // keypress
-        
+        case "Space":
+          var key = new KeyboardEvent("keydown", {key: " ", code: "Space", keyCode: 32, which: 32, bubbles: true, composed: true})
+          keytarget[0].dispatchEvent(key);
+          break;
+        case "ArrowLeft":
+          var key = new KeyboardEvent("keydown", {key: "ArrowLeft", code: "ArrowLeft", keyCode: 37, which: 37, bubbles: true, composed: true})
+          keytarget[0].dispatchEvent(key);
+          break;
+        case "ArrowRight":
+          var key = new KeyboardEvent("keydown", {key: "ArrowRight", code: "ArrowRight", keyCode: 39, which: 39, bubbles: true, composed: true})
+          keytarget[0].dispatchEvent(key);
+          break;
+        default:
           break;
       }
     };
@@ -96,6 +110,22 @@
           console.log("sending slider click " + site.progress());
           socket.send("skip " + site.progress());
         }, 0);
+      }
+    });
+    keytarget[0].addEventListener("keydown", (event) => {
+      if (event.isTrusted) {
+        switch (event.code) {
+          case "Space":
+          case "ArrowLeft":
+          case "ArrowRight":
+            setTimeout(() => {
+              console.log("sending keydown " + event.code);
+              socket.send(event.code);
+            }, 0);
+            break;
+          default:
+            break;
+        }
       }
     });
   
